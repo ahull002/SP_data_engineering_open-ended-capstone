@@ -13,7 +13,7 @@ This data pipeline consists of three key elements: a source, a processing step o
 This data pipeline is architected as a batch-based flow. In this architecture scenario, we have built an Extraction Transformation Load (ETL) flow from the New York Taxi & Limousine Commission data sets to push this data to a data warehouse and an analytics database.
 
 
-## How to test & develope this?
+## How to test & develop this?
 This project's engineering effort utilizes test-driven development (TDD) processes that rely on repetitive short development cycles. To ensure code quality, the development team will write a test that initially fails the automated test case. This test case defines a desired outcome or improvement for a new-found function, then generates the minimum extent of code to pass that test. 
 The testing procedure will follow the below sequence of steps:
 1.	Add a test
@@ -26,12 +26,13 @@ The testing procedure will follow the below sequence of steps:
 
 ## Constraints, Limitations, Assumptions
 
-__Question 1.__ Data sources you are considering for your open-ended capstone 
+__Question 1.__ Data sources you are considering for your open-ended capstone?  
 
 Data: New York Taxi & Limousine Commission data set.
 Link: https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
-__Question 2.__ Volume available of data for each source (historic and delta)
+__Question 2.__ Volume available of data for each source (historic and delta)? 
+
 The historical load comprises the below-archived file sets for each month of the year since 2009, totaling around 288 gigabytes. The complementary delta loads occur each month and increment the data set by at least 2 gigabytes in total. 
 
 __Delta Load (2 gigabytes per month):__
@@ -46,10 +47,12 @@ __Historical Load (288 gigabytes):__
 * For-Hire Vehicle Trip Records (CSV) – 15,578,784 KB
 * High Volume For-Hire Vehicle Trip Records (CSV) – 183,361,248 KB
 
-__Question 3.__ The volume you will be using for your capstone
+__Question 3.__ The volume you will be using for your capstone? 
+
 As of December 2020, I plan on utilizing all 288 gigabytes of the Historical Load, and I will delta load the new storage location by the number of months from December to the month when the capstone is due. 
 
-__Question 4.__ Why do you think this is a good data source to be used for the capstone
+__Question 4.__ Why do you think this is a good data source to be used for the capstone? 
+
 I believe this is a good data source as the data is extensive and has large delta loads that are still active and will help people analyze the end product versus spending time wrangling the data itself. 
 
 __Project Pros & Cons:__
