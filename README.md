@@ -34,17 +34,17 @@ Link: https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 __Question 2.__ Volume available of data for each source (historic and delta)
 The historical load comprises the below-archived file sets for each month of the year since 2009, totaling around 288 gigabytes. The complementary delta loads occur each month and increment the data set by at least 2 gigabytes in total. 
 
-Delta Load (2 gigabytes per month).
-Yellow Taxi Trip Records (CSV): file size – 579,698 KB
-Green Taxi Trip Records (CSV): file size – 39,744 KB
-For-Hire Vehicle Trip Records (CSV) – 108,186 KB
-High Volume For-Hire Vehicle Trip Records (CSV) – 1,273,342 KB
+__Delta Load (2 gigabytes per month):__
+* Yellow Taxi Trip Records (CSV): file size – 579,698 KB
+* Green Taxi Trip Records (CSV): file size – 39,744 KB
+* For-Hire Vehicle Trip Records (CSV) – 108,186 KB
+* High Volume For-Hire Vehicle Trip Records (CSV) – 1,273,342 KB
 
-Historical Load (288 gigabytes).
-Yellow Taxi Trip Records (CSV): file size – 83,476,512 KB
-Green Taxi Trip Records (CSV): file size – 5,723,136 KB
-For-Hire Vehicle Trip Records (CSV) – 15,578,784 KB
-High Volume For-Hire Vehicle Trip Records (CSV) – 183,361,248 KB
+__Historical Load (288 gigabytes):__
+* Yellow Taxi Trip Records (CSV): file size – 83,476,512 KB
+* Green Taxi Trip Records (CSV): file size – 5,723,136 KB
+* For-Hire Vehicle Trip Records (CSV) – 15,578,784 KB
+* High Volume For-Hire Vehicle Trip Records (CSV) – 183,361,248 KB
 
 __Question 3.__ The volume you will be using for your capstone
 As of December 2020, I plan on utilizing all 288 gigabytes of the Historical Load, and I will delta load the new storage location by the number of months from December to the month when the capstone is due. 
