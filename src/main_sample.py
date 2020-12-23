@@ -1,15 +1,17 @@
+# Import libraries
 import os
 import datetime
 import urllib.request
 
-
+# Establish file names to archive data
 FILENAMES = [
-    "sample_yellow_tripdata.csv",
-    "sample_green_tripdata.csv",
-    "sample_fhv_tripdata.csv",
-    "sample_fhvhv_tripdata.csv",
+    "data\sample_yellow_tripdata.csv",
+    "data\sample_green_tripdata.csv",
+    "data\sample_fhv_tripdata.csv",
+    "data\sample_fhvhv_tripdata.csv",
 ]
 
+# Establish base urls to scrape TLC Trip Record Data
 BASE_URLS = [
     "https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_",
     "https://s3.amazonaws.com/nyc-tlc/trip+data/green_tripdata_",
@@ -17,12 +19,20 @@ BASE_URLS = [
     "https://nyc-tlc.s3.amazonaws.com/trip+data/fhvhv_tripdata_",
 ]
 
-SUCCESS_LOG = "success_files"
+# Build a logfile to capture success (report of data collected) and failures (report of broken or error urls)
+SUCCESS_LOG = "data\success_files.txt"
+FAILURE_LOG = "data\failure_files.txt"
 
+# Sample toggle True = pulls sample data and number sample lines, Falso = pull all data
 SAMPLING = True
-SAMPLE_LINES = 2
+SAMPLE_LINES = 1
 
+# This function returns a concatenated string: base_url+year+"-"+formatted_month+".csv"
+def _get_project_url(base_url, month, year):
+    formatted_month = "{0:02d}".format(month)
+    return f"{base_url}{year}-{formatted_month}.csv"
 
+# Retrieves data from list of urls
 def _get_project_url(base_url, month, year):
     formatted_month = "{0:02d}".format(month)
     return f"{base_url}{year}-{formatted_month}.csv"
