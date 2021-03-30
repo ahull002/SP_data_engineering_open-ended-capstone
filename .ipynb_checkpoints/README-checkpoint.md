@@ -21,7 +21,7 @@ This data pipeline consists of three key elements: a source, a processing step o
 This data pipeline is architected as a batch-based flow. In this architecture scenario, we have built an Extraction Transformation Load (ETL) flow from the New York Taxi & Limousine Commission data sets to push this data to a data warehouse and an analytics database.
 
 
-## How to test & develop this?
+## How to test this?
 This project's engineering effort utilizes test-driven development (TDD) processes that rely on repetitive short development cycles. To ensure code quality, the development team will write a test that initially fails the automated test case. This test case defines a desired outcome or improvement for a new-found function, then generates the minimum extent of code to pass that test. 
 The testing procedure will follow the below sequence of steps:
 1.	Add a test
