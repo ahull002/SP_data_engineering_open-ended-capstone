@@ -20,12 +20,12 @@ BASE_URLS = [
 ]
 
 # Build a logfile to capture success (report of data collected) and failures (report of broken or error urls)
-SUCCESS_LOG = "data\success_log"
-FAILURE_LOG = "data\error_log"
+SUCCESS_LOG = "data\success_files.txt"
+FAILURE_LOG = "data\failure_files.txt"
 
-# Sample toggle True = pulls sample data and number sample lines, Falso = pull all data
+# Sample toggle (True = pulls sample data and number sample lines (prototype), Falso = pull all data)
 SAMPLING = True
-SAMPLE_LINES = 2
+SAMPLE_LINES = 1
 
 # This function returns a concatenated string: base_url+year+"-"+formatted_month+".csv"
 def _get_project_url(base_url, month, year):
@@ -33,9 +33,15 @@ def _get_project_url(base_url, month, year):
     return f"{base_url}{year}-{formatted_month}.csv"
 
 # Retrieves data from list of urls
+def _get_project_url(base_url, month, year):
+    formatted_month = "{0:02d}".format(month)
+    return f"{base_url}{year}-{formatted_month}.csv"
+
+
 def _process_url(url, filename):
-    print(f"Starting URL processing for {url} and {filename}") # print statement to show
+    print(f"Starting URL processing for {url} and {filename}")
     datasource = urllib.request.urlopen(url)
+
     file_exists = os.path.isfile(filename)
     write_mode = "a" if file_exists else "w"
     with open(filename, write_mode) as f, open(SUCCESS_LOG, "a") as success_f:
@@ -50,7 +56,6 @@ def _process_url(url, filename):
                 continue
 
             f.write(line.decode("utf8").rstrip())
-            f.write("\n")
            
             if SAMPLING and i > SAMPLE_LINES:
                 break
@@ -58,16 +63,6 @@ def _process_url(url, filename):
 
 
 def _print_neat_error(err, month, year, url):
-    with open(FAILURE_LOG, "a") as failure_f:
-        failure_f.write(
-            f"""
-            {err}\nThe above error occured for the following:\n
-            URL: {url}
-            Month: {month}
-            Year: {year}
-            {_line_separator()}\n
-        """
-        )
     print(
         f"""
         {err}\nThe above error occured for the following:\n

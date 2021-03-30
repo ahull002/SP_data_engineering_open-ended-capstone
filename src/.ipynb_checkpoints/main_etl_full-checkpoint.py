@@ -23,8 +23,8 @@ BASE_URLS = [
 SUCCESS_LOG = "data\success_log"
 FAILURE_LOG = "data\error_log"
 
-# Sample toggle True = pulls sample data and number sample lines, Falso = pull all data
-SAMPLING = True
+# Sample toggle (True = pulls sample data and number sample lines (prototype), Falso = pull all data)
+SAMPLING = False
 SAMPLE_LINES = 2
 
 # This function returns a concatenated string: base_url+year+"-"+formatted_month+".csv"
