@@ -4,10 +4,10 @@ Image by: Taton Moise
 
 
 ## Table of contents
-* [What is this?](#What-is-this?)
-* [How to use this?](#How-to-use-this?)
-* [How to test this?](#How-to-test-this?)
-* [Constraints, Limitations, Assumptions](#Constraints,-Limitations,-Assumptions)
+* [What is this?](#what-is-this)
+* [How to use this?](#how-to-use-this)
+* [How to test this?](#how-to-test-this)
+* [Constraints, Limitations, Assumptions](#constraints-limitations-assumptions)
 * [Project Setup](#project-setup)
 
 
