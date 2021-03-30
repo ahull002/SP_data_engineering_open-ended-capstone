@@ -3,6 +3,14 @@
 Image by: Taton Moise
 
 
+## Table of contents
+* [What is this?](#what-is-this?)
+* [How to use this?](#how-to-use-this?)
+* [How to test & develop this?](#how-to-test-&-develop-this?)
+* [Constraints, Limitations, Assumptions](#constraints,-limitations,-assumptions)
+* [Project Setup](#project-setup)
+
+
 ## What is this?
 The NYC Taxi and Limousine Commission Data Pipeline is a series of data processing steps. The pipeline computationally ingests data at the pipeline's beginning. Then there are a series of steps in which each step delivers an output that is the input to the next step. This process continues until the pipeline is complete. In some cases, independent efforts run in parallel.
 
