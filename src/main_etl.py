@@ -4,7 +4,7 @@ import os
 import datetime
 import urllib.request
 
-# Sample/Full Extract Transform Load (ETL) toggle (True = pulls sample data and number sample lines (prototype), False = pull all data)
+# Sample/Full Extract Transform Load (ETL) toggle (True = pulls sample data and number sample lines (prototype), Falso = pull all data)
 SAMPLING = True
 SAMPLE_LINES = 5
 
@@ -248,3 +248,5 @@ def run():
             if (month, year) == (current_month, current_year):
                 return
             sync_files(month, year)
+
+run()
