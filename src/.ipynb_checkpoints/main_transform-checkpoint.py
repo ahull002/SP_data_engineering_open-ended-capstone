@@ -5,7 +5,7 @@ import datetime
 import urllib.request
 
 # Sample/Full Extract Transform Load (ETL) toggle (True = pulls sample data and number sample lines (prototype), Falso = pull all data)
-SAMPLING = False
+SAMPLING = True
 SAMPLE_LINES = 5
 
 
